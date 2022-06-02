@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import static frc.robot.Constants.*;
+import static frc.robot.Constants.SwerveDrive.*;
 
 public class DrivetrainSubsystem extends SubsystemBase {
   /**
@@ -107,14 +108,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withPosition(0, 0),
             // This can either be STANDARD or FAST depending on your gear configuration
             Mk3SwerveModuleHelper.GearRatio.STANDARD,
-            // This is the ID of the drive motor
-            FL_DRIVE_MOTOR,
-            // This is the ID of the steer motor
-            FL_STEER_MOTOR,
-            // This is the ID of the steer encoder
-            FL_STEER_ENCODER,
-            // This is how much the steer encoder is offset from true zero (In our case, zero is facing straight forward)
-            FL_STEER_OFFSET
+            FrontLeft.DriveMotor,
+            FrontLeft.SteerMotor,
+            FrontLeft.SteerEncoder,
+            FrontLeft.SteerOffset
     );
 
     // We will do the same for the other modules
@@ -123,10 +120,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withSize(2, 4)
                     .withPosition(2, 0),
             Mk3SwerveModuleHelper.GearRatio.STANDARD,
-            FR_DRIVE_MOTOR,
-            FR_STEER_MOTOR,
-            FR_STEER_ENCODER,
-            FR_STEER_OFFSET
+            FrontRight.DriveMotor,
+            FrontRight.SteerMotor,
+            FrontRight.SteerEncoder,
+            FrontRight.SteerOffset
     );
 
     m_backLeftModule = Mk3SwerveModuleHelper.createFalcon500(
@@ -134,10 +131,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withSize(2, 4)
                     .withPosition(4, 0),
             Mk3SwerveModuleHelper.GearRatio.STANDARD,
-            BL_DRIVE_MOTOR,
-            BL_STEER_MOTOR,
-            BL_STEER_ENCODER,
-            BL_STEER_OFFSET
+            BackLeft.DriveMotor,
+            BackLeft.SteerMotor,
+            BackLeft.SteerEncoder,
+            BackLeft.SteerOffset
     );
 
     m_backRightModule = Mk3SwerveModuleHelper.createFalcon500(
@@ -145,10 +142,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withSize(2, 4)
                     .withPosition(6, 0),
             Mk3SwerveModuleHelper.GearRatio.STANDARD,
-            BR_DRIVE_MOTOR,
-            BR_STEER_MOTOR,
-            BR_STEER_ENCODER,
-            BR_STEER_OFFSET
+            BackRight.DriveMotor,
+            BackRight.SteerMotor,
+            BackRight.SteerEncoder,
+            BackRight.SteerOffset
     );
   }
 

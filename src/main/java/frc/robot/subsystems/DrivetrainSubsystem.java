@@ -108,10 +108,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withPosition(0, 0),
             // This can either be STANDARD or FAST depending on your gear configuration
             Mk3SwerveModuleHelper.GearRatio.STANDARD,
-            FrontLeft.DriveMotor,
-            FrontLeft.SteerMotor,
-            FrontLeft.SteerEncoder,
-            FrontLeft.SteerOffset
+            FrontLeft.DRIVE_MOTOR,
+            FrontLeft.STEER_MOTOR,
+            FrontLeft.STEER_ENCODER,
+            FrontLeft.STEER_OFFSET
     );
 
     // We will do the same for the other modules
@@ -120,10 +120,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withSize(2, 4)
                     .withPosition(2, 0),
             Mk3SwerveModuleHelper.GearRatio.STANDARD,
-            FrontRight.DriveMotor,
-            FrontRight.SteerMotor,
-            FrontRight.SteerEncoder,
-            FrontRight.SteerOffset
+            FrontRight.DRIVE_MOTOR,
+            FrontRight.STEER_MOTOR,
+            FrontRight.STEER_ENCODER,
+            FrontRight.STEER_OFFSET
     );
 
     m_backLeftModule = Mk3SwerveModuleHelper.createFalcon500(
@@ -131,10 +131,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withSize(2, 4)
                     .withPosition(4, 0),
             Mk3SwerveModuleHelper.GearRatio.STANDARD,
-            BackLeft.DriveMotor,
-            BackLeft.SteerMotor,
-            BackLeft.SteerEncoder,
-            BackLeft.SteerOffset
+            BackLeft.DRIVE_MOTOR,
+            BackLeft.STEER_MOTOR,
+            BackLeft.STEER_ENCODER,
+            BackLeft.STEER_OFFSET
     );
 
     m_backRightModule = Mk3SwerveModuleHelper.createFalcon500(
@@ -142,10 +142,10 @@ public class DrivetrainSubsystem extends SubsystemBase {
                     .withSize(2, 4)
                     .withPosition(6, 0),
             Mk3SwerveModuleHelper.GearRatio.STANDARD,
-            BackRight.DriveMotor,
-            BackRight.SteerMotor,
-            BackRight.SteerEncoder,
-            BackRight.SteerOffset
+            BackRight.DRIVE_MOTOR,
+            BackRight.STEER_MOTOR,
+            BackRight.STEER_ENCODER,
+            BackRight.STEER_OFFSET
     );
   }
 
